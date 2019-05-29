@@ -1,0 +1,36 @@
+<head>
+		<!-- Plotly.js -->
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	  </head>
+	  
+	  <body>
+		<h3>MediaWiki writes/second</h3>
+		<div id="myDiv"></div>
+		<div>* updates every 1 second</div>
+		<script>
+			var count = 0
+			var request = new XMLHttpRequest()
+			var total_writes =  [{x: [1], y: [1], type: 'scatter'}];
+			
+			request.onload = function() {
+				
+				var data = JSON.parse(this.response)
+				count = count + 1
+				total_writes[0].x.push(count)
+				total_writes[0].y.push(data[0][0])
+				
+
+				if (request.status >= 200 && request.status < 400) {
+						Plotly.newPlot('myDiv', total_writes, {}, {showSendToCloud: true});
+				} else {
+					console.log('error')
+				}
+			}
+
+			setInterval(function(){ 
+				request.open('GET', 'http://localhost:8080/get_totals', true)
+				request.send()
+			}, 2000);
+
+		</script>
+	  </body>
