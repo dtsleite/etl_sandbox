@@ -27,4 +27,6 @@ Se tudo correu como o esperado serão vistos os dados sendo extraídos no format
 
 Você deverá visualizar o dashboard sendo atualizado com a quantidade de edições capturadas por segundo.
 
+![Alt text](https://user-images.githubusercontent.com/18425415/58601702-66856400-8260-11e9-9282-2dbd94e226e3.JPG?raw=true "Python ETL dashboard")
+
 
