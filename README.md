@@ -25,6 +25,8 @@ Se tudo correu como o esperado serão vistos os dados sendo extraídos no format
 
 4 - Em um novo terminal acesse novamente a mesma pasta deste repositório e digite o comando source init_dashboard.sh
 
+Abra seu navegador de preferência e acesse o endereço: http://localhost:8080
+
 Você deverá visualizar o dashboard sendo atualizado com a quantidade de edições capturadas por segundo.
 
 ![Alt text](https://user-images.githubusercontent.com/18425415/58601702-66856400-8260-11e9-9282-2dbd94e226e3.JPG?raw=true "Python ETL dashboard")
